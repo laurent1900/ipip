@@ -2,8 +2,6 @@
 import sys
 import argparse
 import requests
-import json
-import lxml
 from bs4 import BeautifulSoup
 
 reload(sys)
