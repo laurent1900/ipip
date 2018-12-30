@@ -7,3 +7,10 @@
 
 --file 从列表读取ip进行查询
 
+例子：
+
+python ipip.py --ip=1.1.1.1
+
+或
+
+python ipip.py --file=list.txt
