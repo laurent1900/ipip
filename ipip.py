@@ -1,12 +1,12 @@
 #coding:utf-8
 import sys
 import argparse
-import requests
-from lxml import etree
 from bs4 import BeautifulSoup
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
+import requests
+from lxml import etree
 
 def check(ip):
 	try:
@@ -55,9 +55,8 @@ def check(ip):
 				value1.append(str(i.strip()))
 		del value1[1]
 		data1 = zip(key1,value1)
-		results = []
 		for i in data1:
-			results.append(str(i[0],':',i[1]))
+			results.append(str(i[0]+':'+i[1]))
 		return results
 	except Exception,e:
 		print e
@@ -101,4 +100,4 @@ if __name__ == '__main__':
 	else:
 		ip = args.ip
 		file = args.file
-	main(ip,file)
+		main(ip,file)
