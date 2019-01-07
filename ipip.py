@@ -27,17 +27,7 @@ def check(ip):
 					}
 		data = {'ip':ip}
 		response = requests.post(url, data=data, headers=headers)
-		# soup = BeautifulSoup(response.text,'html.parser')
-		results = ['########################################################################################################################################################']
-		# for i in soup.find_all('td'):
-		# 	for j in i.descendants:
-		# 		if j.string and j.string!='购买此数据' and j.string!='\n' and j.string!=' ' and j.string!='产品详情' and j.string!=')' and j.string!='Ping' and j.string!='Traceroute' and j.string!='）':
-		# 			if j.string.strip() in results:
-		# 				pass
-		# 			else:
-		# 				results.append(j.string.strip())
-		# return results
-		# print response.text
+		results = ['#####################################################################################################################################']
 		html = etree.HTML(response.text)
 		html_data = html.xpath('/html/body/div[3]/div/table[1]//td/text()')
 		key1 = []
@@ -45,8 +35,6 @@ def check(ip):
 		for i in html_data:
 			if not i.strip()=='':
 				key1.append(str(i.strip()))
-		# for i in key1:
-		# 	print i.strip()
 		html_data = html.xpath('/html/body/div[3]/div/table[1]//a/text()')
 		value1.append(str(html_data[0].strip()))
 		html_data = html.xpath('/html/body/div[3]/div/table[1]//span/text()')
