@@ -1,12 +1,13 @@
 #coding:utf-8
 import sys
 import argparse
-from bs4 import BeautifulSoup
+import requests
+from lxml import etree
+
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
-import requests
-from lxml import etree
+
 
 def check(ip):
 	try:
