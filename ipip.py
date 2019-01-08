@@ -4,7 +4,6 @@ import argparse
 import requests
 from lxml import etree
 
-
 reload(sys)
 sys.setdefaultencoding('utf-8')
 
