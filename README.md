@@ -2,7 +2,7 @@
 通过爬虫爬取ipip.net的信息并保存成txt文档,支持单个ip和从列表读取
 
 依赖库：
-bs4、argparse、requests
+lxml、argparse、requests
 
 参数说明：
 
